@@ -3,7 +3,10 @@ from dataclasses import dataclass, field
 from functools import cached_property
 from pathlib import Path
 
-from fluent.runtime import FluentLocalization, FluentResourceLoader
+from fluent.runtime import (
+    FluentLocalization,
+    FluentResourceLoader,
+)
 from telegrinder.node import IsNode
 
 
@@ -27,7 +30,10 @@ class FluentConfig:
             if not locale_dir.is_dir():
                 continue
 
-            ftl_files = [p.name for p in locale_dir.glob("*.ftl")]
+            ftl_files = [
+                    str(p.relative_to(locale_dir))
+                    for p in locale_dir.rglob("*.ftl")
+                ]
             if not ftl_files:
                 continue
 
@@ -36,11 +42,8 @@ class FluentConfig:
                 locales=[locale_dir.name],
                 resource_ids=ftl_files,
                 resource_loader=loader,
+                functions=self.functions,
             )
-            for name, func in self.functions.items():
-                if not localization.functions:
-                    localization.functions = {}
-                localization.functions[name] = func
 
             result[locale_dir.name] = localization
 
