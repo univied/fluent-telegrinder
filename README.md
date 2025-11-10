@@ -34,12 +34,12 @@ config = FluentConfig(
     default_locale="ru",
     replace_underscore=True, # i_love_telegrinder -> i-love-telegrinder
 )
-FluentTranslator.configure(config)
+Translator.configure(config)
 
 bot = Telegrinder(API(Token.from_env()))
 
 @bot.on.message(TextEquals("hello", ignore_case=True)) # hello - i18n key (hello, привет)
-async def on_hello(msg: Message, _: FluentTranslator):
+async def on_hello(msg: Message, _: Translator):
     await msg.reply(_.hello_answer(user=msg.from_user.first_name))
 
 bot.run_forever(skip_updates=True)
@@ -47,4 +47,4 @@ bot.run_forever(skip_updates=True)
 
 <h2><img src='https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Objects/Notebook.png?raw=true' width='20' style='vertical-align:middle'> License</h2>
 
-Fluent Telegrinder is [MIT licensed](https://github.com/hymn4l/fluent-telegrinder/blob/main/LICENSE)
+Fluent Telegrinder is **[MIT licensed](https://github.com/hymn4l/fluent-telegrinder/blob/main/LICENSE)**
