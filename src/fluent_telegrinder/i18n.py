@@ -32,5 +32,4 @@ class FluentTranslator(ABCTranslator):
         )
 
 
-class Translator(FluentTranslator):
-    """Just FluentTranslator alias"""
+type Translator = FluentTranslator

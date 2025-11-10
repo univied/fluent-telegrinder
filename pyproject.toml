@@ -4,9 +4,9 @@ version = "1.0.3"
 description = "Fluent i18n implementation for telegrinder"
 readme = "README.md"
 authors = [
-    { name = "ventuero", email = "amerfoe@gmail.com" }
+    { name = "hymn4l", email = "amerfoe@gmail.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 dependencies = [
     "fluent-runtime>=0.4.0",
 ]
@@ -19,8 +19,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/ventuero/fluent-telegrinder/blob/main/README.md"
-Repository = "https://github.com/ventuero/fluent-telegrinder"
+Homepage = "https://github.com/hymn4l/fluent-telegrinder/blob/main/README.md"
+Repository = "https://github.com/hymn4l/fluent-telegrinder"
 
 [project.optional-dependencies]
 dev = [
