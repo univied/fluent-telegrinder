@@ -1,6 +1,6 @@
 [project]
 name = "fluent-telegrinder"
-version = "1.0.5"
+version = "1.0.6"
 description = "Fluent i18n implementation for telegrinder"
 readme = "README.md"
 authors = [

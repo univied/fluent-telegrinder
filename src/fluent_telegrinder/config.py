@@ -31,9 +31,9 @@ class FluentConfig:
                 continue
 
             ftl_files = [
-                    str(p.relative_to(locale_dir))
-                    for p in locale_dir.rglob("*.ftl")
-                ]
+                str(p.relative_to(locale_dir))
+                for p in locale_dir.rglob("*.ftl")
+            ]
             if not ftl_files:
                 continue
 

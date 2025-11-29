@@ -28,7 +28,7 @@ class FluentTranslator(ABCTranslator):
     @classmethod
     def get_subnodes(cls) -> dict[str, IsNode]:
         return {"locale": cls.config.source, "separator": KeySeparator}
-    
+
     def translate(self, message_id: str, **context: typing.Any) -> str:
         return (
             self.config
@@ -37,4 +37,5 @@ class FluentTranslator(ABCTranslator):
         )
 
 
-Translator: typing.TypeAlias = FluentTranslator
+class Translator(FluentTranslator):
+    ...
