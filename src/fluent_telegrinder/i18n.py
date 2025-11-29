@@ -1,6 +1,7 @@
 import typing
 
-from telegrinder.node.i18n import ABCTranslator
+from telegrinder.node.base import IsNode
+from telegrinder.node.i18n import ABCTranslator, KeySeparator
 
 from fluent_telegrinder.config import FluentConfig
 
@@ -24,6 +25,10 @@ class FluentTranslator(ABCTranslator):
             )
         return self.separator.join(self._keys)
 
+    @classmethod
+    def get_subnodes(cls) -> dict[str, IsNode]:
+        return {"locale": cls.config.source, "separator": KeySeparator}
+    
     def translate(self, message_id: str, **context: typing.Any) -> str:
         return (
             self.config
@@ -32,4 +37,4 @@ class FluentTranslator(ABCTranslator):
         )
 
 
-type Translator = FluentTranslator
+Translator: typing.TypeAlias = FluentTranslator
