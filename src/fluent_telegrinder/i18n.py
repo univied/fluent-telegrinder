@@ -1,7 +1,6 @@
 import typing
 
-from telegrinder.node.base import IsNode
-from telegrinder.node.i18n import ABCTranslator, KeySeparator
+from telegrinder.node import ABCTranslator, KeySeparator, Node
 
 from fluent_telegrinder.config import FluentConfig
 
@@ -26,8 +25,8 @@ class FluentTranslator(ABCTranslator):
         return self.separator.join(self._keys)
 
     @classmethod
-    def get_subnodes(cls) -> dict[str, IsNode]:
-        return {"locale": cls.config.source, "separator": KeySeparator}
+    def get_subnodes(cls) -> dict[str, Node]:
+        return {"locale": cls.config.source, "separator": KeySeparator}  # pyright: ignore[reportReturnType]
 
     def translate(self, message_id: str, **context: typing.Any) -> str:
         return (

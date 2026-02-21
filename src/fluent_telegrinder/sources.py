@@ -1,4 +1,5 @@
-from telegrinder.node import UserSource, scalar_node
+from nodnod import scalar_node
+from telegrinder.node import UserSource
 
 from fluent_telegrinder.i18n import FluentTranslator
 

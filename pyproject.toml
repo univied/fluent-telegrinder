@@ -1,11 +1,9 @@
 [project]
 name = "fluent-telegrinder"
-version = "1.0.6"
+version = "1.1.0"
 description = "Fluent i18n implementation for telegrinder"
 readme = "README.md"
-authors = [
-    { name = "skarnu", email = "amerfoe@gmail.com" }
-]
+authors = [{ name = "univied", email = "amerfoe@gmail.com" }]
 requires-python = ">=3.14,<4.0"
 dependencies = [
     "fluent-runtime>=0.4.0",
@@ -19,15 +17,18 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[project.urls]
-Homepage = "https://github.com/equalred/fluent-telegrinder/blob/main/README.md"
-Repository = "https://github.com/equalred/fluent-telegrinder"
+[project.scripts]
+ftg = "fluent_telegrinder.cli:app"
 
-[project.optional-dependencies]
-dev = [
-    "ruff>=0.13.2",
-    "telegrinder",
-]
+[project.urls]
+Homepage = "https://github.com/univied/fluent-telegrinder/blob/main/README.md"
+Repository = "https://github.com/univied/fluent-telegrinder"
 
 [tool.uv.sources]
-telegrinder = { git = "https://github.com/timoniq/telegrinder.git", rev = "dev" }
+telegrinder = { git = "https://github.com/timoniq/telegrinder" }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.7",
+    "telegrinder",
+]
