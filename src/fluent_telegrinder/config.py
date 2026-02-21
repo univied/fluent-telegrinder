@@ -20,7 +20,7 @@ class _Translator(Protocol):
 
     def format_value(
         self,
-        message_id: str,
+        msg_id: str,
         args: dict[str, Any] | None = None,
     ) -> str | None: ...
 
@@ -52,16 +52,16 @@ class _CompiledLocalization:
 
     def format_value(
         self,
-        message_id: str,
+        msg_id: str,
         args: dict[str, Any] | None = None,
     ) -> str | None:
-        if not self._bundle.has_message(message_id):
+        if not self._bundle.has_message(msg_id):
             return None
-        message = self._bundle.get_message(message_id)
+        message = self._bundle.get_message(msg_id)
         if message.value is None:
             return None
         value, _errors = self._bundle.format_pattern(message.value, args)
-        return value
+        return value if isinstance(value, str) else None
 
 
 @dataclass

@@ -20,6 +20,7 @@ Usage
     ftg compile locales/
     ftg compile locales/ --output locales_compiled/ --force
 """
+
 from __future__ import annotations
 
 import pickle

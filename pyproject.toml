@@ -5,10 +5,7 @@ description = "Fluent i18n implementation for telegrinder"
 readme = "README.md"
 authors = [{ name = "univied", email = "amerfoe@gmail.com" }]
 requires-python = ">=3.14,<4.0"
-dependencies = [
-    "fluent-runtime>=0.4.0",
-    "typer>=0.20.0",
-]
+dependencies = ["fluent-runtime>=0.4.0", "typer>=0.20.0"]
 
 keywords = ["telegram", "bot", "fluent"]
 classifiers = [
@@ -16,6 +13,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.uv]
+package = true
 
 [project.scripts]
 ftg = "fluent_telegrinder.cli:app"
