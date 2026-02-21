@@ -67,7 +67,7 @@ class _CompiledLocalization:
 @dataclass
 class FluentConfig:
     folder: Path | str
-    source: Node
+    source: type[Node]
     default_locale: str = "en"
     replace_underscore: bool = True
     functions: dict[str, Callable] = field(default_factory=dict)
