@@ -1,5 +1,5 @@
 [project]
-name = "telefluent"
+name = "fluent-telegrinder"
 version = "1.1.0"
 description = "Fluent i18n implementation for telegrinder"
 readme = "README.md"
@@ -18,11 +18,11 @@ classifiers = [
 package = true
 
 [project.scripts]
-ftl-compile = "telefluent.cli:app"
+ftl-compile = "fluent_telegrinder.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/univied/telefluent/blob/main/README.md"
-Repository = "https://github.com/univied/telefluent"
+Homepage = "https://github.com/univied/fluent-telegrinder/blob/main/README.md"
+Repository = "https://github.com/univied/fluent-telegrinder"
 
 [project.optional-dependencies]
 cli = ["typer>=0.24.1"]
