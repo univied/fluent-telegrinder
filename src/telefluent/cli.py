@@ -17,8 +17,7 @@ Benefits
     walks the AST to build resolver objects; it's already very fast).
 
 Usage
-    ftg compile locales/
-    ftg compile locales/ --output locales_compiled/ --force
+    ftl-compile locales/ -o compiled/ -f
 """
 
 from __future__ import annotations
@@ -30,7 +29,7 @@ import typer
 from fluent.syntax import FluentParser
 
 app = typer.Typer(
-    name="ftg",
+    name="ftl-compile",
     help="Fluent translation toolkit for telegrinder.",
     no_args_is_help=True,
 )
@@ -75,9 +74,9 @@ def compile(  # noqa: A001
 
     Example::
 
-        ftg compile locales/
+        ftl-compile locales/
         # or to a separate output tree:
-        ftg compile locales/ -o locales_compiled/ --force
+        ftl-compile locales/ -o compiled/ -f
     """
     parser = FluentParser(with_spans=False)
     compiled = 0

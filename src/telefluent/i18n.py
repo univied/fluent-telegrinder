@@ -2,7 +2,7 @@ import typing
 
 from telegrinder.node import ABCTranslator, KeySeparator, Node
 
-from fluent_telegrinder.config import FluentConfig
+from telefluent.config import FluentConfig
 
 
 class Translator(ABCTranslator):
@@ -30,7 +30,8 @@ class Translator(ABCTranslator):
     def translate(self, message_id: str, **context: typing.Any) -> str:
         return (
             self.config.get_translator(self.locale).format_value(
-                message_id, context,
+                message_id,
+                context,
             )
             or message_id
         )
