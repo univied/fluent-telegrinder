@@ -2,14 +2,14 @@
 
 <img src='https://github.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/blob/main/Animals%20and%20Nature/Owl.webp?raw=true' width='75' style='vertical-align:middle'>
 
-# Telefluent
+# Fluent Telegrinder
 [Fluent](https://projectfluent.org) i18n implementation for telegrinder
 
 <p>
     <img alt="uv" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fastral-sh%2Fuv%2Fmain%2Fassets%2Fbadge%2Fv0.json&style=flat-square&labelColor=232226&color=6341AC&link=https%3A%2F%2Fastral.sh%2Fuv">
     <img alt="Ruff" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fastral-sh%2Fruff%2Fmain%2Fassets%2Fbadge%2Fv2.json&style=flat-square&labelColor=232226&color=6341AC&link=https%3A%2F%2Fastral.sh%2Fruff">
-    <a href="https://github.com/univied/telefluent/blob/master/pyproject.toml"><img alt="Python versions" src="https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/univied/telefluent/refs/heads/main/pyproject.toml&style=flat-square&logo=python&logoColor=fff&labelColor=black"></img></a>
-    <a href="https://github.com/univied/telefluent/blob/master/pyproject.toml">
+    <a href="https://github.com/univied/fluent-telegrinder/blob/master/pyproject.toml"><img alt="Python versions" src="https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/univied/fluent-telegrinder/refs/heads/main/pyproject.toml&style=flat-square&logo=python&logoColor=fff&labelColor=black"></img></a>
+    <a href="https://github.com/univied/fluent-telegrinder/blob/master/pyproject.toml">
     <img alt="Project version" src="https://img.shields.io/badge/version-v1.1.0-black?style=flat-square&logo=python&logoColor=fff"></img></a>
 </p>
 
@@ -20,7 +20,7 @@
 <h2><img src='https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Objects/Pencil.png?raw=true' width='20' style='vertical-align:middle'> Usage</h2>
 
 ```shell
-pip install telefluent
+pip install fluent-telegrinder
 ```
 
 ### CLI
@@ -49,7 +49,7 @@ config = FluentConfig(
 ```python
 from telegrinder import API, Message, Telegrinder, Token
 
-from telefluent import (
+from fluent_telegrinder import (
     DefaultLocaleSource,  # / UserLanguageSource 
     FluentConfig,
     Translator,
@@ -75,6 +75,6 @@ bot.run_forever(skip_updates=True)
 
 <h2><img src='https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Objects/Notebook.png?raw=true' width='20' style='vertical-align:middle'> License</h2>
 
-Telefluent is [MIT licensed](https://github.com/univied/telefluent/blob/main/LICENSE).
+Fluent Telegrinder is [MIT licensed](https://github.com/univied/fluent-telegrinder/blob/main/LICENSE).
 
 
