@@ -5,9 +5,7 @@ src = ["src"]
 include = ["src/**.py"]
 
 [lint]
-select = [
-    "ALL"
-]
+select = ["ALL"]
 ignore = [
     "ARG",
     "ANN",
@@ -21,14 +19,13 @@ ignore = [
     "PLR0913",
     "SIM103",
     "ISC003",
-    "SIM114", # identical by code != identical by meaning
+    "SIM114",  # identical by code != identical by meaning
     # awful things, never use.
     # It makes runtime work differently from typechecker
     "TC001",
     "TC002",
     "TC003",
     "TC006",
-    "UP038", # only affects perfomance and brings nothing useful
     "F401",
     "RUF",
     "S702",
@@ -37,7 +34,7 @@ ignore = [
     "FBT001",
     "FBT002",
     "PLE1205",
-    "PGH003"
+    "PGH003",
 ]
 isort.no-lines-before = ["local-folder"]
 flake8-tidy-imports.ban-relative-imports = "parents"

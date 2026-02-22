@@ -1,20 +1,18 @@
-from telegrinder.node import UserSource, scalar_node
+from nodnod import scalar_node
+from telegrinder.node import UserSource
 
-from fluent_telegrinder.i18n import FluentTranslator
+from fluent_telegrinder.i18n import Translator
 
 
 @scalar_node
 class DefaultLocaleSource:
     @classmethod
-    async def compose(cls) -> str:
-        return FluentTranslator.config.default_locale
+    async def __compose__(cls) -> str:
+        return Translator.config.default_locale
 
 
 @scalar_node
 class UserLanguageSource:
     @classmethod
-    async def compose(cls, user: UserSource) -> str:
-        return (
-            user.language_code
-            .unwrap_or(FluentTranslator.config.default_locale)
-        )
+    async def __compose__(cls, user: UserSource) -> str:
+        return user.language_code.unwrap_or(Translator.config.default_locale)
