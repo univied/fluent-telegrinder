@@ -2,7 +2,7 @@ import typing
 
 from telegrinder.node import ABCTranslator, KeySeparator, Node
 
-from telefluent.config import FluentConfig
+from fluent_telegrinder.config import FluentConfig
 
 
 class Translator(ABCTranslator):

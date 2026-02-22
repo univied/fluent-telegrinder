@@ -1,7 +1,7 @@
 from nodnod import scalar_node
 from telegrinder.node import UserSource
 
-from telefluent.i18n import Translator
+from fluent_telegrinder.i18n import Translator
 
 
 @scalar_node
