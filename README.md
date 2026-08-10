@@ -10,7 +10,7 @@
     <img alt="Ruff" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fastral-sh%2Fruff%2Fmain%2Fassets%2Fbadge%2Fv2.json&style=flat-square&labelColor=232226&color=6341AC&link=https%3A%2F%2Fastral.sh%2Fruff">
     <a href="https://github.com/univied/fluent-telegrinder/blob/master/pyproject.toml"><img alt="Python versions" src="https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/univied/fluent-telegrinder/refs/heads/main/pyproject.toml&style=flat-square&logo=python&logoColor=fff&labelColor=black"></img></a>
     <a href="https://github.com/univied/fluent-telegrinder/blob/master/pyproject.toml">
-    <img alt="Project version" src="https://img.shields.io/badge/version-v1.2.0-black?style=flat-square&logo=python&logoColor=fff"></img></a>
+    <img alt="Project version" src="https://img.shields.io/badge/version-v1.1.0-black?style=flat-square&logo=python&logoColor=fff"></img></a>
 </p>
 
 💖 Part of [Awesome Telegrinder](https://github.com/prostomarkeloff/awesome-telegrinder)
